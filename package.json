@@ -1,4 +1,5 @@
 {
+  "author": "REGNAULT Alex BUT2APP",
   "name": "nodejs-pokedex-api",
   "version": "1.0.0",
   "description": "Nous allons tâcher de créer une API permettant d'effectuer des opérations CRUD sur les pokémons. Ce projet sera réalisé avec Express pour la gestion des routes et avec une base de donnée NoSQL.",
@@ -8,6 +9,7 @@
     "start": "node ./build/index.js",
     "type-check": "tsc --noEmit",
     "build": "tsc",
+    "db:seed": "prisma seed",
     "db:reset": "prisma migrate reset --force",
     "db:migrate": "prisma migrate dev",
     "db:generate": "prisma generate",
@@ -20,7 +22,6 @@
     "url": "git+https://github.com/vfourny/nodejs-pokedex-api.git"
   },
   "keywords": [],
-  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/vfourny/nodejs-pokedex-api/issues"

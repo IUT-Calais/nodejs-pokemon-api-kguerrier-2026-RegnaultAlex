@@ -5,11 +5,11 @@
   "description": "Nous allons tâcher de créer une API permettant d'effectuer des opérations CRUD sur les pokémons. Ce projet sera réalisé avec Express pour la gestion des routes et avec une base de donnée NoSQL.",
   "main": "build/index.js",
   "scripts": {
-    "dev": "nodemon --exec ts-node ./src/index.ts",
+    "dev": "nodemon --exec tsx ./src/index.ts",
     "start": "node ./build/index.js",
     "type-check": "tsc --noEmit",
     "build": "tsc",
-    "db:seed": "prisma seed",
+    "db:seed": "prisma db seed",
     "db:reset": "prisma migrate reset --force",
     "db:migrate": "prisma migrate dev",
     "db:generate": "prisma generate",
@@ -33,7 +33,9 @@
     "bcrypt": "^5.1.1",
     "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2",
+    "npx": "^10.2.2",
     "swagger-ui-express": "^5.0.1",
+    "tsx": "^4.21.0",
     "yamljs": "^0.3.0"
   },
   "devDependencies": {
@@ -51,12 +53,12 @@
     "supertest": "^7.0.0",
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
-    "typescript": "^5.7.3"
+    "typescript": "^5.9.3"
   },
   "engines": {
     "node": ">=22 <23"
   },
   "prisma": {
-    "seed": "ts-node prisma/seed.ts"
+    "seed": "tsx prisma/seed.ts"
   }
 }

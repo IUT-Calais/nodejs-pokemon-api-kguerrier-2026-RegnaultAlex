@@ -1,4 +1,5 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=22257745&assignment_repo_type=AssignmentRepo)
+
 # Création d'une API Pokémon
 
 Notre projet est de créer une Application fullstack permettant de gérer des cartes pokémons. Dans ce mmodule nous allons nous concentrer sur la partie backend de l'application.
@@ -192,9 +193,9 @@ L'endpoint `POST:/users/login` prendra en paramètre un objet JSON contenant les
 
 Vous traiterez les codes http suivants:
 
-- `201 Created` : Si la connexion a réussi
-- `404 Not Found` : Si l'utilisateur n'existe pas en base de données
-- `400 Bad Request` : Si le mot de passe ne correspond pas à l'utilisateur
+- `200 OK` : Si la connexion a réussi
+- `401 Unauthorized` : Si l'utilisateur n'existe pas en base de données
+- `401 Unauthorized` : Si le mot de passe ne correspond pas à l'utilisateur
 
 > Nous utilons ici une méthode `POST` et non `GET` car il s'agit d'un point de vue applicatif de la création d'une session utilisateur. Dans le cas d'une création le `POST` est donc plus logique.
 

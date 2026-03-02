@@ -3,6 +3,7 @@ import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 async function main() {
+  await prisma.user.deleteMany();
   await prisma.pokemonCard.deleteMany();
   await prisma.type.deleteMany();
 
@@ -378,6 +379,13 @@ async function main() {
       imageUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/pokemon/91.png',
     },
   });
+
+  await prisma.user.create({
+    data: {
+      "email": "admin@gmail.com",
+      "password": "admin"
+    }
+  })
 
   console.log('Seed completed!');
 }
